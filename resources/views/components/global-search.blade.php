@@ -45,7 +45,7 @@
                         </div>
                         <div role="group">
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:opacity-50 font-medium aria-selected:opacity-50"
+                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
                                 role="option" data-disabled="false" aria-selected="true" data-value="Dashboard">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -53,20 +53,23 @@
                                     <rect width="7" height="18" x="3" y="3" rx="1"></rect>
                                     <rect width="7" height="7" x="14" y="3" rx="1"></rect>
                                     <rect width="7" height="7" x="14" y="14" rx="1"></rect>
-                                </svg>Dashboard
+                                </svg>
+                                <span class="opacity-50">Dashboard</span>
                             </a>
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:opacity-50 font-medium aria-selected:opacity-50"
+                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
                                 role="option" data-disabled="false" aria-selected="false" data-value="Billing">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="mr-2 lucide lucide-credit-card size-5">
                                     <rect width="20" height="14" x="2" y="5" rx="2"></rect>
                                     <line x1="2" x2="22" y1="10" y2="10"></line>
-                                </svg>Billing
+                                </svg>
+                                <span class="opacity-50">Billing</span>
+
                             </a>
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:opacity-50 font-medium aria-selected:opacity-50"
+                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
                                 role="option" data-disabled="false" aria-selected="false" data-value="Charts">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -74,10 +77,11 @@
                                     class="mr-2 lucide lucide-chart-line size-5">
                                     <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
                                     <path d="m19 9-5 5-4-4-3 3"></path>
-                                </svg>Charts
+                                </svg>
+                                <span class="opacity-50">Charts</span>
                             </a>
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:opacity-50 font-medium aria-selected:opacity-50"
+                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
                                 role="option" data-disabled="false" aria-selected="false" data-value="User Posts">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -88,7 +92,8 @@
                                     <path d="M10 9H8"></path>
                                     <path d="M16 13H8"></path>
                                     <path d="M16 17H8"></path>
-                                </svg>User Posts
+                                </svg>
+                                <span class="opacity-50">User Posts</span>
                             </a>
                         </div>
                     </div>
@@ -98,7 +103,7 @@
                         </div>
                         <div role="group">
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:opacity-50 font-medium aria-selected:opacity-50"
+                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
                                 role="option" data-disabled="false" aria-selected="false" data-value="Settings">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -108,10 +113,11 @@
                                         d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
                                     </path>
                                     <circle cx="12" cy="12" r="3"></circle>
-                                </svg>Settings
+                                </svg>
+                                <span class="opacity-50">Settings</span>
                             </a>
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:opacity-50 font-medium aria-selected:opacity-50"
+                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
                                 role="option" data-disabled="false" aria-selected="false" data-value="Homepage">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -121,10 +127,11 @@
                                     <path
                                         d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
                                     </path>
-                                </svg>Homepage
+                                </svg>
+                                <span class="opacity-50">Homepage</span>
                             </a>
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:opacity-50 font-medium aria-selected:opacity-50"
+                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
                                 role="option" data-disabled="false" aria-selected="false" data-value="Documentation">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -132,10 +139,11 @@
                                     class="mr-2 lucide lucide-book-open size-5">
                                     <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                                     <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                                </svg>Documentation
+                                </svg>
+                                <span class="opacity-50">Documentation</span>
                             </a>
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:opacity-50 font-medium aria-selected:opacity-50"
+                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
                                 role="option" data-disabled="false" aria-selected="false" data-value="Support">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -143,7 +151,8 @@
                                     class="mr-2 lucide lucide-messages-square size-5">
                                     <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path>
                                     <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path>
-                                </svg>Support
+                                </svg>
+                                <span class="opacity-50">Support</span>
                             </a>
                         </div>
                     </div>
