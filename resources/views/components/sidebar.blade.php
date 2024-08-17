@@ -1,11 +1,12 @@
-<aside id="sidebar_wrapper" class="fixed z-[100] transition-all duration-300 md:transition-none md:duration-0 top-0 md:sticky bg-background opacity-0 md:opacity-100">
-    <div
-        class="w-[calc(100vw-100px)] shadow-lg md:shadow-none md:w-[220px] xl:w-[260px] h-screen overflow-y-auto border-r border-border"
+<aside id="sidebar_wrapper"
+    class="fixed z-[100] transition-all duration-300 md:transition-none md:duration-0 top-0 md:sticky h-full bg-background opacity-0 md:opacity-100">
+    <div class="w-[calc(100vw-100px)] shadow-lg md:shadow-none md:w-[220px] xl:w-[260px] h-screen overflow-y-auto border-r border-border md:sticky md:top-0"
         id="sidebaroverlay__" data-overlayscrollbars-initialize>
         <div class="relative flex flex-col flex-1 h-full max-h-screen p-6 md:p-0 gap-y-8 md:gap-y-2">
             {{-- Close mobile sidebar --}}
             <button type="button"
-                class="absolute block transition-opacity rounded-sm right-4 top-4 opacity-70 ring-offset-background hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none md:hidden" id="closeSidebar">
+                class="absolute block transition-opacity rounded-sm right-4 top-4 opacity-70 ring-offset-background hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none md:hidden"
+                id="closeSidebar">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="lucide lucide-x size-4">
@@ -27,7 +28,7 @@
             <div class="flex md:h-14 items-center md:p-4 lg:h-[60px]">
                 @include('components.dropdown-project')
 
-                {{-- Navbar toggler --}}
+                {{-- sidebar desktop toggler --}}
                 <button
                     class="hidden md:inline-flex items-center justify-center text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed ring-offset-background select-none active:scale-[0.98] hover:bg-accent hover:text-accent-foreground rounded-md ml-auto size-9 lg:size-8"
                     id="mini_nav_toggler">
@@ -152,13 +153,14 @@
 </aside>
 
 {{-- sidebar backdrop --}}
-<div class="fixed inset-0 z-[99] hidden bg-background/80 backdrop-blur-sm min-h-dvh lg:hidden transition-all duration-300" aria-hidden="true"
-    id="backdropFixed"></div>
+<div class="fixed inset-0 z-[99] hidden bg-background/80 backdrop-blur-sm min-h-dvh lg:hidden transition-all duration-300"
+    aria-hidden="true" id="backdropFixed"></div>
 
 @push('js')
     <script type="module">
-
-        if($(window).width() < 768) {
+        if ($(window).width() < 1025) {
+            toggleMiniSidebar()
+        } else if ($(window).width() < 768) {
             hideMobileSidebar()
         }
 
@@ -172,29 +174,29 @@
             $('#backdropFixed').removeClass('hidden')
         }
 
+        function toggleMiniSidebar() {
+            $('#sidebaroverlay__').toggleClass('!w-[68px]') // toggle width
+            $('#project_options').toggleClass('hidden')
+            $('#mini_nav_toggler').find('.lucide-panel-left-close').toggleClass('hidden')
+            $('#mini_nav_toggler').find('.lucide-panel-right-close').toggleClass('hidden')
+            $('[data-sub-menu-title]').toggleClass('opacity-0')
+            $('[data-nav-item] span').toggleClass(
+                'absolute opacity-0 group-hover:opacity-100 z-50 whitespace-nowrap left-full bg-background shadow-md group-hover:left-[120%] py-1.5 px-3 rounded-md text-sm font-normal text-foreground invisible group-hover:visible'
+            )
+
+            setTimeout(() => {
+                $('[data-nav-item] span').toggleClass('transition-all')
+            }, 300);
+            $('#upgrade_to_pro').toggleClass('hidden')
+        }
+
         $(() => {
             $('#mini_nav_toggler').on('click', function() {
                 toggleMiniSidebar()
             })
 
-            function toggleMiniSidebar() {
-                $('#sidebaroverlay__').toggleClass('!w-[68px]') // toggle width
-                $('#project_options').toggleClass('hidden')
-                $('#mini_nav_toggler').find('.lucide-panel-left-close').toggleClass('hidden')
-                $('#mini_nav_toggler').find('.lucide-panel-right-close').toggleClass('hidden')
-                $('[data-sub-menu-title]').toggleClass('opacity-0')
-                $('[data-nav-item] span').toggleClass(
-                    'absolute opacity-0 group-hover:opacity-100 z-50 whitespace-nowrap left-full bg-background shadow-md group-hover:left-[120%] py-1.5 px-3 rounded-md text-sm font-normal text-foreground invisible group-hover:visible'
-                )
-
-                setTimeout(() => {
-                    $('[data-nav-item] span').toggleClass('transition-all')
-                }, 300);
-                $('#upgrade_to_pro').toggleClass('hidden')
-            }
-
             $(window).on('resize', function() {
-                if($(window).width() < 768) {
+                if ($(window).width() < 768) {
                     hideMobileSidebar()
                 } else {
                     $('#sidebar_wrapper').removeClass('-translate-x-full opacity-0')
