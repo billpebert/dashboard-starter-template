@@ -14,7 +14,7 @@
     @stack('css')
 </head>
 
-<body class="min-h-screen bg-background">
+<body class="min-h-screen bg-background" id="app_body">
     <div class="relative flex w-full min-h-screen">
         @include('components.sidebar')
 

@@ -6,11 +6,11 @@ import {OverlayScrollbars} from 'overlayscrollbars';
 
 // Initialize OverlayScrollbars in your script
 document.addEventListener('DOMContentLoaded', () => {
-    OverlayScrollbars(document.querySelector('#sidebaroverlay__'), {
+    const overlayScrollConfig = {
         scrollbars: {
             theme: 'os-theme-dark',
             visibility: 'auto',
-            autoHide: 'leave',
+            autoHide: 'never',
             autoHideDelay: 700,
             autoHideSuspend: false,
             dragScroll: true,
@@ -20,7 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
         overflow: {
             x: 'visible'
         }
+    }
+    OverlayScrollbars(document.querySelector('#sidebaroverlay__'), {
+        ...overlayScrollConfig,
+        scrollbars: {
+            autoHide: 'leave'
+        }
     });
+
+    OverlayScrollbars(document.querySelector('#globalSearchModalList'), overlayScrollConfig)
 });
 
 window.$ = window.jQuery = jQuery;

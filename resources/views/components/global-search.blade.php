@@ -15,7 +15,7 @@
         role="dialog" tabindex="-1" aria-labelledby="modal-search-global-label">
         <div
             class="hs-overlay-animation-target hs-overlay-open:scale-100 hs-overlay-open:opacity-100 scale-95 opacity-0 ease-in-out transition-all duration-200 sm:max-w-lg sm:w-full m-3 sm:mx-auto h-[calc(100%-2rem)] flex items-center">
-            <div class="flex flex-col max-h-full overflow-hidden w-full border rounded-md pointer-events-auto bg-background shadow-2xl">
+            <div class="flex flex-col w-full max-h-full overflow-hidden border rounded-md shadow-2xl pointer-events-auto bg-background">
                 <div class="relative flex items-center px-3 border-b">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -24,7 +24,7 @@
                         <path d="m21 21-4.3-4.3"></path>
                     </svg>
                     <input
-                        class="flex w-full py-3 text-sm bg-transparent rounded-md outline-none placeholder:text-foreground-muted h-12 disabled:cursor-not-allowed disabled:opacity-50"
+                        class="flex w-full h-12 py-3 text-sm bg-transparent rounded-md outline-none placeholder:text-foreground-muted disabled:cursor-not-allowed disabled:opacity-50"
                         placeholder="Type a command or search..." autofocus type="text" id="global-search-dialog"
                         value="">
                     <button type="button"
@@ -39,13 +39,13 @@
                         <span class="sr-only">Close</span>
                     </button>
                 </div>
-                <div class="max-h-[300px] h-full overflow-y-auto">
+                <div class="max-h-[300px] h-full overflow-y-auto" id="globalSearchModalList" data-overlayscrollbars-initialize>
                     <div class="px-2 py-1 overflow-hidden text-foreground" role="presentation" data-value="MENU">
                         <div aria-hidden="true" class="text-xs font-medium text-muted-foreground px-2 py-1.5">MENU
                         </div>
                         <div role="group">
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
+                                class="relative flex items-center px-2 py-3 text-sm font-medium rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent group"
                                 role="option" data-disabled="false" aria-selected="true" data-value="Dashboard">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -57,7 +57,7 @@
                                 <span class="opacity-50">Dashboard</span>
                             </a>
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
+                                class="relative flex items-center px-2 py-3 text-sm font-medium rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent group"
                                 role="option" data-disabled="false" aria-selected="false" data-value="Billing">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -69,7 +69,7 @@
 
                             </a>
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
+                                class="relative flex items-center px-2 py-3 text-sm font-medium rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent group"
                                 role="option" data-disabled="false" aria-selected="false" data-value="Charts">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -81,7 +81,7 @@
                                 <span class="opacity-50">Charts</span>
                             </a>
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
+                                class="relative flex items-center px-2 py-3 text-sm font-medium rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent group"
                                 role="option" data-disabled="false" aria-selected="false" data-value="User Posts">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -103,7 +103,7 @@
                         </div>
                         <div role="group">
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
+                                class="relative flex items-center px-2 py-3 text-sm font-medium rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent group"
                                 role="option" data-disabled="false" aria-selected="false" data-value="Settings">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -117,7 +117,7 @@
                                 <span class="opacity-50">Settings</span>
                             </a>
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
+                                class="relative flex items-center px-2 py-3 text-sm font-medium rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent group"
                                 role="option" data-disabled="false" aria-selected="false" data-value="Homepage">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -131,7 +131,7 @@
                                 <span class="opacity-50">Homepage</span>
                             </a>
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
+                                class="relative flex items-center px-2 py-3 text-sm font-medium rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent group"
                                 role="option" data-disabled="false" aria-selected="false" data-value="Documentation">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -143,7 +143,7 @@
                                 <span class="opacity-50">Documentation</span>
                             </a>
                             <a href="#"
-                                class="relative flex items-center px-2 py-3 text-sm rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent font-medium group"
+                                class="relative flex items-center px-2 py-3 text-sm font-medium rounded-sm outline-none cursor-default select-none text-muted-foreground aria-selected:bg-accent group"
                                 role="option" data-disabled="false" aria-selected="false" data-value="Support">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"

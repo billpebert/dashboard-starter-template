@@ -65,10 +65,11 @@
 
     * {
         @apply border-border;
+        scrollbar-width: thin;
     }
 }
 
-#sidebaroverlay__ .os-theme-dark {
+#app_body .os-theme-dark {
     --os-handle-bg: hsl(var(--border));
     --os-handle-bg-hover: hsl(var(--border));
     --os-handle-bg-active: hsl(var(--border));
