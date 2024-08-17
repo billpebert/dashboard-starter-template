@@ -1,5 +1,5 @@
 <header class="sticky top-0 z-50 flex h-14 bg-background px-4 lg:h-[60px] xl:px-8">
-    <div class="container flex items-center px-0 max-w-7xl gap-x-3">
+    <div class="container flex items-center px-0 max-w-7xl mx-auto gap-x-3">
         {{-- Sidebar toggle for mobile view --}}
         <button
             class="inline-flex items-center justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed ring-offset-background select-none active:scale-[0.98] border border-input hover:bg-accent hover:text-accent-foreground rounded-md size-9 shrink-0 md:hidden"

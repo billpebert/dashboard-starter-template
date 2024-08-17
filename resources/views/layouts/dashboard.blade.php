@@ -21,7 +21,7 @@
         <div class="flex flex-col flex-1">
             @include('components.header')
             <main class="flex-1 p-4 xl:px-8">
-                <div class="container flex flex-col h-full gap-4 px-0 max-w-7xl lg:gap-6">
+                <div class="container flex flex-col h-full gap-4 px-0 max-w-7xl mx-auto lg:gap-6">
                     @yield('content')
                 </div>
             </main>
