@@ -1,9 +1,20 @@
 <header class="sticky top-0 z-50 flex h-14 bg-background px-4 lg:h-[60px] xl:px-8">
     <div class="container flex items-center px-0 max-w-7xl gap-x-3">
-        <div class="flex rounded-lg size-9 animate-pulse bg-muted md:hidden"></div>
+        <button
+            class="inline-flex items-center justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed ring-offset-background select-none active:scale-[0.98] border border-input hover:bg-accent hover:text-accent-foreground rounded-md size-9 shrink-0 md:hidden"
+            type="button" id="toggleMobileSidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-menu size-5">
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+            <span class="sr-only">Toggle navigation menu</span>
+        </button>
         <div class="flex-1 w-full">
             <button
-                class="inline-flex items-center transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed ring-offset-background select-none active:scale-[0.98] border border-input hover:bg-accent hover:text-accent-foreground py-2 px-4 relative h-9 w-full justify-start rounded-md bg-muted/50 text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-72">
+                class="inline-flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed ring-offset-background select-none active:scale-[0.98] border border-input hover:bg-accent hover:text-accent-foreground py-2 px-4 relative h-9 w-full justify-start rounded-md bg-muted/50 text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-72">
                 <span class="inline-flex">Search<span
                         class="hidden sm:inline-flex">&nbsp;documentation</span>...</span><kbd
                     class="pointer-events-none absolute right-[0.3rem] top-[0.45rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 text-[10px] font-medium opacity-100 sm:flex">
@@ -34,10 +45,10 @@
                 </svg>
                 <span class="sr-only">Toggle theme</span>
             </button>
-            <div class="z-50 min-w-32 overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-2 before:absolute before:-top-2 before:start-0 before:w-full"
+            <div class="z-50 min-w-32 overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground hs-dropdown-menu md:transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-2 before:absolute before:-top-2 before:start-0 before:w-full"
                 tabindex="-1">
                 <button type="button"
-                    class="relative flex items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent hover:bg-accent focus:text-accent-foreground w-full"
+                    class="relative flex items-center rounded-sm px-2 py-1.5 text-sm outline-none md:transition-colors focus:bg-accent hover:bg-accent focus:text-accent-foreground w-full"
                     tabindex="-1" data-tw-theme="light">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -54,7 +65,7 @@
                     </svg><span>Light</span>
                 </button>
                 <button type="button"
-                    class="relative flex items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent hover:bg-accent focus:text-accent-foreground w-full"
+                    class="relative flex items-center rounded-sm px-2 py-1.5 text-sm outline-none md:transition-colors focus:bg-accent hover:bg-accent focus:text-accent-foreground w-full"
                     tabindex="-1" data-tw-theme="dark">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -63,7 +74,7 @@
                     </svg><span>Dark</span>
                 </button>
                 <button type="button"
-                    class="relative flex items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent hover:bg-accent focus:text-accent-foreground w-full"
+                    class="relative flex items-center rounded-sm px-2 py-1.5 text-sm outline-none md:transition-colors focus:bg-accent hover:bg-accent focus:text-accent-foreground w-full"
                     tabindex="-1" data-tw-theme="system">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -79,14 +90,14 @@
             <button type="button" class="hs-dropdown-toggle">
                 <span
                     class="relative flex items-center justify-center overflow-hidden bg-blue-500 border rounded-full shrink-0 size-8">
-                    <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" fill="none" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-width="2"
                             d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                     </svg>
                 </span>
             </button>
-            <div class="z-50 min-w-32 overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md mt-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
+            <div class="z-50 min-w-32 overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground hs-dropdown-menu md:transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden shadow-md mt-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
                 tabindex="-1">
                 <div class="flex items-center justify-start gap-2 p-2">
                     <div class="flex flex-col space-y-1 leading-none">
@@ -95,7 +106,7 @@
                     </div>
                 </div>
                 <div role="separator" aria-orientation="horizontal" class="h-px my-1 -mx-1 bg-muted"></div>
-                <a class="relative flex items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground hover:bg-accent space-x-2.5"
+                <a class="relative flex items-center rounded-sm px-2 py-1.5 text-sm outline-none md:transition-colors focus:bg-accent focus:text-accent-foreground hover:bg-accent space-x-2.5"
                     role="menuitem" href="/">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -107,7 +118,7 @@
                     </svg>
                     <p class="text-sm">Dashboard</p>
                 </a>
-                <a class="relative flex items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground hover:bg-accent space-x-2.5"
+                <a class="relative flex items-center rounded-sm px-2 py-1.5 text-sm outline-none md:transition-colors focus:bg-accent focus:text-accent-foreground hover:bg-accent space-x-2.5"
                     role="menuitem" href="/">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -121,7 +132,7 @@
                 </a>
                 <div role="separator" aria-orientation="horizontal" class="h-px my-1 -mx-1 bg-muted"></div>
                 <div role="menuitem"
-                    class="relative flex items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground hover:bg-accent cursor-pointer">
+                    class="relative flex items-center rounded-sm px-2 py-1.5 text-sm outline-none md:transition-colors focus:bg-accent focus:text-accent-foreground hover:bg-accent cursor-pointer">
                     <div class="flex items-center space-x-2.5">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"

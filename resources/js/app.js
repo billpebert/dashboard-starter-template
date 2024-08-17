@@ -1,7 +1,27 @@
 import './bootstrap';
 import jQuery from 'jquery';
 import 'preline';
-import 'overlayscrollbars/overlayscrollbars.css';
+import '/node_modules/overlayscrollbars/styles/overlayscrollbars.css';
+import {OverlayScrollbars} from 'overlayscrollbars';
+
+// Initialize OverlayScrollbars in your script
+document.addEventListener('DOMContentLoaded', () => {
+    OverlayScrollbars(document.querySelector('#sidebaroverlay__'), {
+        scrollbars: {
+            theme: 'os-theme-dark',
+            visibility: 'auto',
+            autoHide: 'leave',
+            autoHideDelay: 700,
+            autoHideSuspend: false,
+            dragScroll: true,
+            clickScroll: true,
+            pointers: ['mouse', 'touch', 'pen'],
+        },
+        overflow: {
+            x: 'visible'
+        }
+    });
+});
 
 window.$ = window.jQuery = jQuery;
 

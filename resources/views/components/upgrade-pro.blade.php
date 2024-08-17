@@ -1,8 +1,8 @@
-<div class="mt-auto xl:p-4">
+<div class="mt-auto xl:p-4" id="upgrade_to_pro">
     <div
         class="overflow-hidden border rounded-lg shadow-sm bg-card text-card-foreground md:max-xl:rounded-none md:max-xl:border-none md:max-xl:shadow-none">
         <div class="flex flex-col space-y-1.5 p-6 md:max-xl:px-4">
-            <h3 class="text-lg font-semibold leading-none tracking-tight font-heading">Upgrade
+            <h3 class="text-lg font-semibold leading-none tracking-tight">Upgrade
                 to Pro</h3>
             <p class="text-sm text-muted-foreground">Unlock all features and get unlimited
                 access to our support team.</p>

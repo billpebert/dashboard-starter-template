@@ -1,4 +1,4 @@
-<div class="relative hs-dropdown">
+<div class="relative hs-dropdown" id="project_options">
     <button
         class="hs-dropdown-toggle inline-flex items-center justify-center text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed ring-offset-background select-none active:scale-[0.98] hover:bg-accent hover:text-accent-foreground py-2 rounded-md h-8 px-2">
         <div class="flex items-center pr-2 space-x-3">
@@ -7,7 +7,7 @@
             </div>
             <div class="flex items-center space-x-3">
                 <span
-                    class="inline-block truncate text-sm font-medium xl:max-w-[120px] max-w-[80px]">project-number-two</span>
+                    class="inline-block truncate text-sm font-medium xl:max-w-[120px] md:max-w-[80px]">project-number-two</span>
             </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
