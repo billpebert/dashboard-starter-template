@@ -1,4 +1,4 @@
-<aside id="sidebar_wrapper" class="fixed z-[999] transition-all duration-300 md:transition-none md:duration-0 top-0 md:sticky bg-background opacity-0 md:opacity-100">
+<aside id="sidebar_wrapper" class="fixed z-[100] transition-all duration-300 md:transition-none md:duration-0 top-0 md:sticky bg-background opacity-0 md:opacity-100">
     <div
         class="w-[calc(100vw-100px)] shadow-lg md:shadow-none md:w-[220px] xl:w-[260px] h-screen overflow-y-auto border-r border-border"
         id="sidebaroverlay__" data-overlayscrollbars-initialize>
@@ -152,7 +152,7 @@
 </aside>
 
 {{-- sidebar backdrop --}}
-<div class="fixed inset-0 z-[998] hidden bg-background/80 backdrop-blur-sm min-h-dvh lg:hidden transition-all duration-300" aria-hidden="true"
+<div class="fixed inset-0 z-[99] hidden bg-background/80 backdrop-blur-sm min-h-dvh lg:hidden transition-all duration-300" aria-hidden="true"
     id="backdropFixed"></div>
 
 @push('js')
@@ -207,7 +207,6 @@
 
             $('#closeSidebar, #backdropFixed').on('click', function() {
                 hideMobileSidebar()
-                console.log('test');
             })
         })
     </script>

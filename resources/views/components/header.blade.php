@@ -1,5 +1,6 @@
 <header class="sticky top-0 z-50 flex h-14 bg-background px-4 lg:h-[60px] xl:px-8">
     <div class="container flex items-center px-0 max-w-7xl gap-x-3">
+        {{-- Sidebar toggle for mobile view --}}
         <button
             class="inline-flex items-center justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed ring-offset-background select-none active:scale-[0.98] border border-input hover:bg-accent hover:text-accent-foreground rounded-md size-9 shrink-0 md:hidden"
             type="button" id="toggleMobileSidebar">
@@ -12,15 +13,10 @@
             </svg>
             <span class="sr-only">Toggle navigation menu</span>
         </button>
-        <div class="flex-1 w-full">
-            <button
-                class="inline-flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed ring-offset-background select-none active:scale-[0.98] border border-input hover:bg-accent hover:text-accent-foreground py-2 px-4 relative h-9 w-full justify-start rounded-md bg-muted/50 text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-72">
-                <span class="inline-flex">Search<span
-                        class="hidden sm:inline-flex">&nbsp;documentation</span>...</span><kbd
-                    class="pointer-events-none absolute right-[0.3rem] top-[0.45rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 text-[10px] font-medium opacity-100 sm:flex">
-                    <span class="text-xs">⌘</span>K</kbd>
-            </button>
-        </div>
+
+        @include('components.global-search')
+
+        {{-- Theme select dropdown --}}
         <div class="relative inline-flex hs-dropdown">
             <button
                 class="hs-dropdown-toggle inline-flex items-center justify-center text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed ring-offset-background select-none active:scale-[0.98] hover:bg-accent hover:text-accent-foreground rounded-md size-8 px-0"
@@ -86,6 +82,8 @@
                 </button>
             </div>
         </div>
+
+        {{-- User profile --}}
         <div class="relative inline-flex hs-dropdown">
             <button type="button" class="hs-dropdown-toggle">
                 <span

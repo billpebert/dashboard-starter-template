@@ -6,29 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <script>
-        ! function() {
-            try {
-                var d = document.documentElement,
-                    c = d.classList;
-                c.remove('light', 'dark');
-                var e = localStorage.getItem('theme');
-                if ('system' === e || (!e && true)) {
-                    var t = '(prefers-color-scheme: dark)',
-                        m = window.matchMedia(t);
-                    if (m.media !== t || m.matches) {
-                        d.style.colorScheme = 'dark';
-                        c.add('dark')
-                    } else {
-                        d.style.colorScheme = 'light';
-                        c.add('light')
-                    }
-                } else if (e) {
-                    c.add(e || '')
-                }
-                if (e === 'light' || e === 'dark') d.style.colorScheme = e
-            } catch (e) {}
-        }()
+    {{-- Detect app theme on page load --}}
+    <script defer>
+        !function(){try{var e=document.documentElement,t=e.classList;t.remove("light","dark");var o=localStorage.getItem("theme");if("system"===o||!o&&!0){var r="(prefers-color-scheme: dark)",l=window.matchMedia(r);l.media!==r||l.matches?(e.style.colorScheme="dark",t.add("dark")):(e.style.colorScheme="light",t.add("light"))}else o&&t.add(o||"");"light"!==o&&"dark"!==o||(e.style.colorScheme=o)}catch(e){}}();
     </script>
 
     @stack('css')
@@ -47,6 +27,8 @@
             </main>
         </div>
     </div>
+
+    @stack('modal')
 
     @stack('js')
 </body>
