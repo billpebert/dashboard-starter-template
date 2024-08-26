@@ -1,3 +1,74 @@
+@php
+    $menus = [
+        (object) [
+            'name' => 'menu',
+            'sub_menus' => [
+                (object) [
+                    'name' => 'Dashboard',
+                    'route' => route('dashboard'),
+                    'is_disabled' => false,
+                    'icon' =>
+                        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-panel-left size-5"><rect width="7" height="18" x="3" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="14" rx="1"></rect></svg>',
+                ],
+                (object) [
+                    'name' => 'Billing',
+                    'route' => '/',
+                    'is_disabled' => false,
+                    'icon' =>
+                        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card size-5"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>',
+                ],
+                (object) [
+                    'name' => 'Charts',
+                    'route' => route('charts'),
+                    'is_disabled' => false,
+                    'icon' =>
+                        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-line size-5"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>',
+                ],
+                (object) [
+                    'name' => 'User Posts',
+                    'route' => '/',
+                    'is_disabled' => true,
+                    'icon' =>
+                        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text size-5"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>',
+                ],
+            ],
+        ],
+        (object) [
+            'name' => 'options',
+            'sub_menus' => [
+                (object) [
+                    'name' => 'Settings',
+                    'route' => '/',
+                    'is_disabled' => false,
+                    'icon' =>
+                        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings size-5"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>',
+                ],
+                (object) [
+                    'name' => 'Homepage',
+                    'route' => '/',
+                    'is_disabled' => false,
+                    'icon' =>
+                        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house size-5"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>',
+                ],
+                (object) [
+                    'name' => 'Documentation',
+                    'route' => '/',
+                    'is_disabled' => false,
+                    'icon' =>
+                        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open size-5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>',
+                ],
+                (object) [
+                    'name' => 'Support',
+                    'route' => '/',
+                    'is_disabled' => true,
+                    'icon' =>
+                        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-square size-5"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></svg>',
+                ],
+            ],
+        ],
+    ];
+@endphp
+
 <aside id="sidebar_wrapper"
     class="fixed z-[100] transition-all duration-300 md:transition-none md:duration-0 top-0 md:sticky h-full bg-background opacity-0 md:opacity-100">
     <div class="w-[calc(100vw-100px)] shadow-lg md:shadow-none md:w-[220px] xl:w-[260px] h-screen overflow-y-auto border-r border-border md:sticky md:top-0"
@@ -51,101 +122,24 @@
                 </button>
             </div>
             <nav class="flex flex-col flex-1 gap-8 md:px-4 md:pt-4">
-                <section class="flex flex-col gap-0.5">
-                    <p class="text-xs text-muted-foreground" data-sub-menu-title>MENU</p>
-                    <a class="relative flex items-center gap-3 p-2 text-sm font-medium rounded-md hover:bg-muted bg-muted group"
-                        href="/" data-nav-item>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="lucide lucide-layout-panel-left size-5">
-                            <rect width="7" height="18" x="3" y="3" rx="1"></rect>
-                            <rect width="7" height="7" x="14" y="3" rx="1"></rect>
-                            <rect width="7" height="7" x="14" y="14" rx="1"></rect>
-                        </svg>
-                        <span>Dashboard</span>
-                    </a>
-
-                    <a class="relative flex items-center gap-3 p-2 text-sm font-medium rounded-md hover:bg-muted text-muted-foreground hover:text-accent-foreground group"
-                        href="#" data-nav-item>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="lucide lucide-credit-card size-5">
-                            <rect width="20" height="14" x="2" y="5" rx="2"></rect>
-                            <line x1="2" x2="22" y1="10" y2="10"></line>
-                        </svg>
-                        <span>Billing</span>
-                    </a>
-                    <a class="relative flex items-center gap-3 p-2 text-sm font-medium rounded-md hover:bg-muted text-muted-foreground hover:text-accent-foreground group"
-                        href="#" data-nav-item>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="lucide lucide-chart-line size-5">
-                            <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
-                            <path d="m19 9-5 5-4-4-3 3"></path>
-                        </svg>
-                        <span>Charts</span>
-                    </a>
-                    <a class="relative flex items-center gap-3 p-2 text-sm font-medium rounded-md cursor-not-allowed text-muted-foreground opacity-80 hover:bg-transparent hover:text-muted-foreground group"
-                        href="#" data-nav-item>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="lucide lucide-file-text size-5">
-                            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
-                            <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                            <path d="M10 9H8"></path>
-                            <path d="M16 13H8"></path>
-                            <path d="M16 17H8"></path>
-                        </svg>
-                        <span>User Posts</span>
-                    </a>
-                </section>
-                <section class="flex flex-col gap-0.5">
-                    <p class="text-xs text-muted-foreground" data-sub-menu-title>OPTIONS</p>
-                    <a class="relative flex items-center gap-3 p-2 text-sm font-medium rounded-md hover:bg-muted text-muted-foreground hover:text-accent-foreground group"
-                        href="#" data-nav-item>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="lucide lucide-settings size-5">
-                            <path
-                                d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
-                            </path>
-                            <circle cx="12" cy="12" r="3"></circle>
-                        </svg>
-                        <span>Settings</span>
-                    </a>
-                    <a class="relative flex items-center gap-3 p-2 text-sm font-medium rounded-md hover:bg-muted text-muted-foreground hover:text-accent-foreground group"
-                        href="#" data-nav-item>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="lucide lucide-house size-5">
-                            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
-                            <path
-                                d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
-                            </path>
-                        </svg>
-                        <span>Homepage</span>
-                    </a>
-                    <a class="relative flex items-center gap-3 p-2 text-sm font-medium rounded-md hover:bg-muted text-muted-foreground hover:text-accent-foreground group"
-                        href="#" data-nav-item>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="lucide lucide-book-open size-5">
-                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                        </svg>
-                        <span>Documentation</span>
-                    </a>
-                    <a class="relative flex items-center gap-3 p-2 text-sm font-medium rounded-md cursor-not-allowed text-muted-foreground opacity-80 hover:bg-transparent hover:text-muted-foreground group"
-                        href="#" data-nav-item>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="lucide lucide-messages-square size-5">
-                            <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path>
-                            <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path>
-                        </svg>
-                        <span>Support</span>
-                    </a>
-                </section>
+                @foreach ($menus as $menu)
+                    <section class="flex flex-col gap-0.5">
+                        <p class="text-xs uppercase text-muted-foreground" data-sub-menu-title>{{ $menu->name }}</p>
+                        @foreach ($menu->sub_menus as $nav)
+                            <a @class([
+                                'relative flex items-center gap-3 p-2 text-sm font-medium rounded-md group',
+                                'text-muted-foreground' => Request::url() != $nav->route,
+                                'bg-muted' => Request::url() == $nav->route,
+                                $nav->is_disabled
+                                    ? 'cursor-not-allowed opacity-75 hover:bg-transparent'
+                                    : 'hover:bg-muted hover:text-accent-foreground',
+                            ]) href="{{ $nav->route }}" data-nav-item>
+                                {!! $nav->icon !!}
+                                <span>{{ $nav->name }}</span>
+                            </a>
+                        @endforeach
+                    </section>
+                @endforeach
             </nav>
             @include('components.upgrade-pro')
         </div>

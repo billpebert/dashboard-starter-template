@@ -1,14 +1,10 @@
 @extends('layouts.dashboard')
 
+@section('heading', 'Dashboard')
+@section('caption', 'Current Role : USER — Change your role in')
+
 @section('content')
-    <div class="flex items-center justify-between">
-        <div class="grid gap-1">
-            <h1 class="text-2xl font-semibold font-heading">Dashboard</h1>
-            <p class="text-base text-muted-foreground">Current Role : USER — Change your role in
-                settings.
-            </p>
-        </div>
-    </div>
+    @foreach (range(1,3) as $i)
     <div
         class="flex items-center justify-center flex-1 p-8 text-center border border-dashed rounded-lg shadow-sm animate-in fade-in-50">
         <div class="flex max-w-[420px] flex-col items-center text-center">
@@ -33,4 +29,5 @@
             </button>
         </div>
     </div>
+    @endforeach
 @endsection
