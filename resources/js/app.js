@@ -3,6 +3,7 @@ import jQuery from 'jquery';
 import 'preline';
 import '/node_modules/overlayscrollbars/styles/overlayscrollbars.css';
 import {OverlayScrollbars} from 'overlayscrollbars';
+import ApexCharts from 'apexcharts';
 
 // Initialize OverlayScrollbars in your script
 document.addEventListener('DOMContentLoaded', () => {
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.$ = window.jQuery = jQuery;
+window.ApexCharts = ApexCharts
 
 $('[data-tw-theme]').on('click', function () {
     $('[data-tw-theme]').removeClass('active')
