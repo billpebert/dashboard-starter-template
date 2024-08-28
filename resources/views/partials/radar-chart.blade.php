@@ -46,9 +46,6 @@
                 xaxis: {
                     categories: ['January', 'February', 'March', 'April', 'May', 'June'],
                 },
-                grid: {
-                    show: false
-                }
             };
 
             var chart = new ApexCharts(document.querySelector("#radarChart"), options);
