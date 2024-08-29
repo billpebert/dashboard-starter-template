@@ -4,7 +4,7 @@
     <div id="chartCircularGauge"></div>
     @slot('title')
         Trending up by 5.2% this month
-        <img src="{{ asset('assets/svgs/chart-up.svg') }}" class="size-4" alt="">
+        <img src="{{ asset('assets/svgs/chart-up.svg') }}" class="size-4 dark:invert" alt="">
     @endslot
     @slot('caption', 'January - June 2024')
 @endcomponent
@@ -43,7 +43,12 @@
                 tooltip: {
                     enabled: true,
                     fillSeriesColor: false,
-                    theme: 'light',
+                    theme: '',
+                },
+                stroke: {
+                    show: false,
+                    curve: 'smooth',
+                    lineCap: 'round',
                 },
                 title: {
                     text: formattedData,
@@ -56,7 +61,7 @@
                         fontSize: '24px',
                         fontWeight: 700,
                         fontFamily: 'Inter, sans-serif',
-                        color: '#0a0a0a'
+                        color: 'hsl(var(--foreground))'
                     },
                 },
                 subtitle: {
@@ -70,7 +75,7 @@
                         fontSize: '12px',
                         fontWeight: 'normal',
                         fontFamily: 'Inter, sans-serif',
-                        color: '#9699a2'
+                        color: 'hsl(var(--muted-foreground))'
                     },
                 }
             };

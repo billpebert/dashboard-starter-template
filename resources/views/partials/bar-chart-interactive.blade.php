@@ -50,9 +50,6 @@
                 axisTicks: {
                     show: false
                 },
-                tooltip: {
-                    enabled: true,
-                },
                 labels: {
                     rotate: 0,
                     trim: false,
@@ -92,6 +89,17 @@
                 },
                 grid: {
                     borderColor: '#f1f1f1',
+                },
+                tooltip: {
+                    theme: '',
+                    // x: {
+                    //     show: false,
+                    // },
+                    y: {
+                        title: {
+                            formatter: (seriesName) => seriesName,
+                        },
+                    }
                 }
             };
 
@@ -137,7 +145,7 @@
                         274
                     ],
                 }],
-                colors: ['#9333ea'],
+                colors: ['hsl(var(--chart-1))'],
                 xaxis: {
                     ...xaxisConfig,
                     ...xaxisDesktop,
@@ -189,7 +197,7 @@
                         284
                     ],
                 }],
-                colors: ['#bf83fc'],
+                colors: ['hsl(var(--chart-2))'],
                 xaxis: {
                     ...xaxisConfig,
                     ...xaxisMobile,

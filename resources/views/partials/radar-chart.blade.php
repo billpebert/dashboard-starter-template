@@ -4,7 +4,7 @@
     <div id="radarChart"></div>
     @slot('title')
         Trending up by 5.2% this month
-        <img src="{{ asset('assets/svgs/chart-up.svg') }}" class="size-4" alt="">
+        <img src="{{ asset('assets/svgs/chart-up.svg') }}" class="size-4 dark:invert" alt="">
     @endslot
     @slot('caption', 'January - June 2024')
 @endcomponent
@@ -16,7 +16,7 @@
 
             var options = {
                 series: [{
-                    name: 'Series 1',
+                    name: 'Desktop',
                     data: [186, 305, 237, 273, 209, 204],
                 }],
                 chart: {
@@ -26,18 +26,25 @@
                         show: false
                     }
                 },
-                colors: ['#9333ea'],
+                plotOptions: {
+                    radar: {
+                        size: 70,
+                    },
+                },
+                colors: ['hsl(var(--chart-1))'],
+                fill: {
+                    colors: ['#9333ea'],
+                    opacity: 0.5,
+                },
                 stroke: {
                     width: 1
                 },
-                fill: {
-                    opacity: 0.5
-                },
                 markers: {
-                    size: 0,
+                    size: 2,
                     hover: {
-                        size: 5,
-                    }
+                        size: 4,
+                    },
+                    strokeColors: 'hsl(var(--chart-1))',
                 },
                 yaxis: {
                     stepSize: 80,
@@ -46,6 +53,10 @@
                 xaxis: {
                     categories: ['January', 'February', 'March', 'April', 'May', 'June'],
                 },
+                tooltip: {
+                    enabled: true,
+                    theme: ''
+                }
             };
 
             var chart = new ApexCharts(document.querySelector("#radarChart"), options);

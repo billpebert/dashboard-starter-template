@@ -4,7 +4,7 @@
     <div id="radialChartRounded"></div>
     @slot('title')
         Trending up by 5.2% this month
-        <img src="{{ asset('assets/svgs/chart-up.svg') }}" class="size-4" alt="">
+        <img src="{{ asset('assets/svgs/chart-up.svg') }}" class="size-4 dark:invert" alt="">
     @endslot
     @slot('caption', 'Total visitors in the last 6 months')
 @endcomponent
@@ -26,14 +26,14 @@
                         hollow: {
                             margin: 0,
                             size: '70%',
-                            background: '#fff',
+                            background: 'hsl(var(--background))',
                             image: undefined,
                             imageOffsetX: 0,
                             imageOffsetY: 0,
                             position: 'front',
                         },
                         track: {
-                            background: '#f5f5f5',
+                            background: 'hsl(var(--muted))',
                             strokeWidth: '67%',
                             margin: 0, // margin is in pixels
                         },
@@ -43,7 +43,7 @@
                             name: {
                                 offsetY: 25,
                                 show: true,
-                                color: 'hsl(0 0% 45.1%)',
+                                color: 'hsl(var(--muted-foreground))',
                                 fontSize: '12px',
                                 fontWeight: 400
                             },
@@ -61,7 +61,8 @@
                     }
                 },
                 fill: {
-                    colors: '#bf83fc'
+                    colors: ['hsl(var(--chart-2))'],
+                    opacity: 0.5
                 },
                 stroke: {
                     lineCap: 'round'

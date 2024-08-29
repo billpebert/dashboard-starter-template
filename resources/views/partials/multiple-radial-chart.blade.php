@@ -4,7 +4,7 @@
     <div id="chartMultipleRadial"></div>
     @slot('title')
         Trending up by 5.2% this month
-        <img src="{{ asset('assets/svgs/chart-up.svg') }}" class="size-4" alt="">
+        <img src="{{ asset('assets/svgs/chart-up.svg') }}" class="size-4 dark:invert" alt="">
     @endslot
     @slot('caption', 'Total visitors in the last 6 months')
 @endcomponent
@@ -38,8 +38,8 @@
                             show: false,
                         },
                         track: {
-                            background: '#f5f5f5',
-                            strokeWidth: '100',
+                            background: 'hsl(var(--muted))',
+                            strokeWidth: '98%',
                             margin: 3, // margin is in pixels
                         },
                         hollow: {
@@ -49,17 +49,15 @@
                     },
                 },
                 labels: ['Other', 'Edge', 'Firefox', 'Safari', 'Chrome'],
-                colors: ['#ead6ff', '#d8b4fe', '#a655f7', '#bf83fc', '#9333ea'],
+                colors: ['hsl(var(--chart-5))', 'hsl(var(--chart-4))', 'hsl(var(--chart-3))', 'hsl(var(--chart-2))', 'hsl(var(--chart-1))'],
                 tooltip: {
                     enabled: true,
                     fillSeriesColor: false,
+                    theme: '',
                     y: {
                         formatter: function(val, { seriesIndex, dataPointIndex }) {
                             return dataCount[seriesIndex]; // Use the value from the series data
                         },
-                        title: {
-                            formatter: (seriesName) => seriesName // Customize the tooltip title
-                        }
                     }
                 },
                 dataLabels: {
@@ -71,7 +69,7 @@
                             opacity: 0.7
                         }
                     }
-                }
+                },
             };
 
             var chart = new ApexCharts(document.querySelector("#chartMultipleRadial"), options);

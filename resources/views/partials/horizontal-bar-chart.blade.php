@@ -4,7 +4,7 @@
     <div id="horizontalBarChart"></div>
     @slot('title')
         Trending up by 5.2% this month
-        <img src="{{ asset('assets/svgs/chart-up.svg') }}" class="size-4" alt="">
+        <img src="{{ asset('assets/svgs/chart-up.svg') }}" class="size-4 dark:invert" alt="">
     @endslot
     @slot('caption', 'Results for the top 5 browsers')
 @endcomponent
@@ -32,7 +32,11 @@
                     bar: {
                         borderRadius: 4,
                         horizontal: true,
+                        distributed: true,
                     }
+                },
+                legend: {
+                    show: false,
                 },
                 dataLabels: {
                     enabled: false
@@ -66,6 +70,12 @@
                 },
                 grid: {
                     show: false
+                },
+                tooltip: {
+                    theme: '',
+                    x: {
+                        show: false,
+                    },
                 }
             };
 

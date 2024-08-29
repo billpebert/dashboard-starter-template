@@ -4,7 +4,7 @@
     <div id="radialChart"></div>
     @slot('title')
         Trending up by 5.2% this month
-        <img src="{{ asset('assets/svgs/chart-up.svg') }}" class="size-4" alt="">
+        <img src="{{ asset('assets/svgs/chart-up.svg') }}" class="size-4 dark:invert" alt="">
     @endslot
     @slot('caption', 'Total visitors in the last 6 months')
 @endcomponent
@@ -19,18 +19,18 @@
                     type: 'radialBar',
                     fontFamily: 'Inter, sans-serif'
                 },
-                plotOptions: {
+            plotOptions: {
                     radialBar: {
                         startAngle: -30,
                         endAngle: -30+360,
                         hollow: {
                             margin: 0,
                             size: '70%',
-                            background: '#fff',
+                            background: 'transparent',
                             position: 'back',
                         },
                         track: {
-                            background: '#f5f5f5',
+                            background: 'hsl(var(--muted))',
                             strokeWidth: '100',
                             margin: 0, // margin is in pixels
                         },
@@ -47,7 +47,6 @@
                                     val = 1260
                                     return val.toLocaleString();
                                 },
-                                color: '#0a0a0a',
                                 fontSize: '36px',
                                 fontWeight: 700,
                                 show: true,

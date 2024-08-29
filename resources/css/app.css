@@ -59,6 +59,28 @@
     --chart-5: 269 100% 92%;
 }
 
+svg.apexcharts-svg g text.apexcharts-text {
+    @apply fill-muted-foreground
+}
+
+svg.apexcharts-svg g text.apexcharts-datalabel-value {
+    @apply fill-foreground
+}
+
+svg.apexcharts-svg .apexcharts-gridline,
+svg.apexcharts-svg .apexcharts-radar-series polygon,
+svg.apexcharts-svg .apexcharts-radar-series line {
+    @apply stroke-border/50
+}
+
+svg.apexcharts-svg .apexcharts-bar-area:nth-child(1) {
+    @apply bg-red-500
+}
+
+.apexcharts-tooltip {
+    @apply bg-background border-border;
+}
+
 @layer base {
     body {
         @apply font-sans text-foreground;

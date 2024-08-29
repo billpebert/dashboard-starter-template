@@ -9,7 +9,7 @@
     </div>
     @slot('title')
         Trending up by 5.2% this month
-        <img src="{{ asset('assets/svgs/chart-up.svg') }}" class="size-4" alt="">
+        <img src="{{ asset('assets/svgs/chart-up.svg') }}" class="size-4 dark:invert" alt="">
     @endslot
     @slot('caption', 'January - June 2024')
 @endcomponent
@@ -27,10 +27,11 @@
                         data: [186, 305, 237, 73, 209, 214]
                     }
                 ],
-                colors: ['#b977f9', '#9333ea'],
+                colors: ['#bf83fc', '#9333ea'],
                 fill: {
                     colors: ['transparent', 'transparent'],
-                    type: 'solid'
+                    type: 'solid',
+                    opacity: 0.4
                 },
                 legend: {
                     show: false,
@@ -52,7 +53,7 @@
                 },
                 stroke: {
                     curve: 'smooth',
-                    width: 1,
+                    width: 2,
                 },
                 xaxis: {
                     categories: [
@@ -60,19 +61,16 @@
                     ],
                     axisTicks: {
                         show: false
-                    }
+                    },
+                    stepSize: 100,
                 },
                 yaxis: {
                     show: false,
+                    stepSize: 400,
                 },
-                grid: {
-                    show: false
-                }
-                // tooltip: {
-                //     x: {
-                //         format: 'dd/MM/yy HH:mm'
-                //     },
-                // },
+                tooltip: {
+                    theme: '',
+                },
             };
 
             var chart = new ApexCharts(document.querySelector("#chartSpline"), options);

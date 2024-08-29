@@ -28,3 +28,11 @@
         </div>
     </div>
 @endsection
+
+@push('css')
+    <style>
+        .apexcharts-tooltip {
+            background: hsl(var(--background));
+        }
+    </style>
+@endpush
